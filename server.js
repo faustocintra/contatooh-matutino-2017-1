@@ -2,7 +2,7 @@ var http = require('http');
 var app = require('./config/express')(); // Cuidado: há dois parênteses vazios aqui
 
 var dbConn = require('./config/database');
-dbConn('mongodb://localhost/contatooh');
+dbConn('mongodb://localhost/contatooh_mat');
 
 http
 	.createServer(app)
