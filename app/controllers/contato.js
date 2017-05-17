@@ -6,10 +6,10 @@ module.exports = function(app) {
    
    controller.listaContatos = function(req, res) {
 		Contato.find().exec().then(
-			function(contatos) {
+			function(contatos) { //achou contato
 				res.json(contatos);
 			},
-			function(erro) {
+			function(erro) { //não achou contato
 				console.error(erro);
 				// HTTP 500: Erro interno do servidor
 				res.status(500).json(erro);
@@ -39,7 +39,7 @@ module.exports = function(app) {
             res.status(204).end();
          },
          function(erro) {
-            return console.error(erro);
+            return console.error(erro); //não conseguiu remover
          }
       );
    };
@@ -49,10 +49,10 @@ module.exports = function(app) {
 
          Contato.findByIdAndUpdate(req.body._id, req.body)
             .exec().then(
-               function(contato) {
+               function(contato) { // vai atualizar
                   res.json(contato);
                },
-               function(erro) {
+               function(erro) {     //não vai conseguir atualizar
                   console.error(erro);
                   // HTTP 500: erro interno do servidor                  
                   res.status(500).json(erro);
@@ -63,11 +63,11 @@ module.exports = function(app) {
       else { // Inserção
 
          Contato.create(req.body).then(
-            function(contato) {
+            function(contato) { //vai inserir
                // HTTP 201: criado
                res.status(201).json(contato);
             },
-            function(erro) {
+            function(erro) { //não vai inserir
                console.log(erro);
                res.status(500).json(erro);
             }
