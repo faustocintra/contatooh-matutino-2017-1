@@ -5,7 +5,7 @@
 var contatos = [
    {
       _id: 1,
-      nome: 'Contato Exemplo 1',
+      nome: 'teste de commit',
       email: 'cont1@empresa.com.br',
       empresa: 'Empresa 1'
    },
