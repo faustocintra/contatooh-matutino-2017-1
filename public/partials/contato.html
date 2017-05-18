@@ -28,6 +28,12 @@
 			ng-options="contato._id as contato.nome for contato in contatos"
 			></select>
 	</div>
+	
+	<div class="form-group">
+		<label for="endereço">Endereço</label>
+		<input type="text" class="form-control" id="endereço"
+			required ng-model="contato.endereço" />
+	</div>
 
    <!--
    <div class="form-group">

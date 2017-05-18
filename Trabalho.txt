@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+cd Desktop/<pasta nome>/<pasta projeto>
+git init . (Inicializando repositório)
+git add . (adicionando arquivo pra ser comunitado)
+git commit -m"First Commit"
+git remote add origin https://github.com/VeronicaFacioli/Projetos.git
+git push -u origin master
+
+use/project -> FORK use2/project
+                            |		
+                          commit
+cd ../
+git clone https://github.com/VeronicaFacioli/fatec-techweek9.git
+=======
+jhgjhghjgjh
+>>>>>>> ca4d5d7eb2559a588140be278f4c60b278b865a6
