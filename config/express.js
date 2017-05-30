@@ -20,12 +20,6 @@ module.exports = function() {
 	app.use(bodyParser.json());
 	app.use(require('method-override')());
 
-	//home(app);
-	load('models', {cwd: 'app'})
-		.then('controllers')
-		.then('routes')
-		.into(app);
-
 	app.use(cookieParser());
 
 	app.use(session(
@@ -38,6 +32,12 @@ module.exports = function() {
 
 	app.use(passport.initialize());
 	app.use(passport.session());
+
+	//home(app);
+	load('models', {cwd: 'app'})
+		.then('controllers')
+		.then('routes')
+		.into(app);
 
 	return app;
 };
