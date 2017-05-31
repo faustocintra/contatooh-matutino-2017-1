@@ -6,6 +6,7 @@ module.exports = function(app) {
          login = req.user.login;
       }
       res.render('index', {usuarioLogado: login});
+      //console.log(res);
    });
 
 }
