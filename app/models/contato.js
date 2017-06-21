@@ -19,6 +19,13 @@ module.exports = function() {
       emergencia: {
          type: mongoose.Schema.ObjectId,
          ref: 'Contato'
+      },
+      telefone: {
+         type: String
+      },
+      tipo_telefone: {
+         type: String,
+         default: 'celular'
       }
    });
 

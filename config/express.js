@@ -36,8 +36,8 @@ module.exports = function() {
 
 	app.use(helmet());
 
-	//app.disable('x-powered-by');
-	app.use(helmet.hidePoweredBy({setTo: 'PHP 5.5.14'}));
+	app.disable('x-powered-by');
+	//app.use(helmet.hidePoweredBy({setTo: 'PHP 5.5.14'}));
 
 	// Evitando o "encaixotamento" do site dentro de um iframe
 	app.use(helmet.frameguard());

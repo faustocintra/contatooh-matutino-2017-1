@@ -1,0 +1,2 @@
+use contatooh
+db.contatos.find()
